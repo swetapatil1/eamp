@@ -8,6 +8,7 @@ import javax.persistence.*;
 public class Role {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private long roleId;
 
     @Column

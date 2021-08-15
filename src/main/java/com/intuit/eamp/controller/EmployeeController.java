@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping(path = "/api/employees")
 public class EmployeeController {
 
@@ -26,7 +27,7 @@ public class EmployeeController {
         }
     }
 
-    @PostMapping("/accessRequest")
+    @RequestMapping(method = RequestMethod.PUT, path = "/accessRequest")
     public ResponseEntity addAccessRequest(@RequestBody AccessRequest accessRequest) {
         AccessRequest response = employeeService.addAccessRequest(accessRequest);
         if (response != null) {

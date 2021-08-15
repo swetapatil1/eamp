@@ -8,6 +8,7 @@ import java.util.List;
 public class Employee implements Serializable {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private long employeeId;
 
     @Column

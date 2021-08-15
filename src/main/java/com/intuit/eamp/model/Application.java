@@ -1,13 +1,12 @@
 package com.intuit.eamp.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Application {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private long appId;
 
     @Column
